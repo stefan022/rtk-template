@@ -1,8 +1,9 @@
 import React from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Dashboard } from "../pages/Dashboard";
+
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import { Dashboard } from "../pages/Dashboard";
 
 export function AppRoute() {
 	return (

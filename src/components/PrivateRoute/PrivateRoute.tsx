@@ -1,6 +1,4 @@
-import React, { ReactNode, useEffect } from "react";
-import { useNavigate } from "react-router";
-import AppRoutes from "../../router/Routes";
+import React, { ReactNode } from "react";
 
 interface IProps {
 	children: ReactNode;
@@ -28,7 +26,7 @@ const PrivateRoute = ({ children }: IProps): JSX.Element | null => {
 	return null;
     */
 
-	return <>{children}</>;
+	return <div>{children}</div>;
 };
 
 export default PrivateRoute;

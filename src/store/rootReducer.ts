@@ -1,4 +1,5 @@
 import { combineReducers } from "@reduxjs/toolkit";
+
 import rootAPI from "./rootAPI";
 
 const rootReducer = combineReducers({
