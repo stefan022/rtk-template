@@ -1,0 +1,34 @@
+import React, { ReactNode, useEffect } from "react";
+import { useNavigate } from "react-router";
+import AppRoutes from "../../router/Routes";
+
+interface IProps {
+	children: ReactNode;
+}
+
+const PrivateRoute = ({ children }: IProps): JSX.Element | null => {
+	/*
+    Include this logic where there is a token
+
+    const token = localStorage.getItem("token");
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (!token) {
+			navigate(AppRoutes.LOGIN);
+
+			return;
+		}
+		// eslint-disable-next-line
+	}, [token]);
+
+	if (token) return <>{children}</>;
+
+	return null;
+    */
+
+	return <>{children}</>;
+};
+
+export default PrivateRoute;
