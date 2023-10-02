@@ -2,7 +2,7 @@
 	"name": "rtk-template",
 	"author": "Stefan Blagojevic",
 	"version": "0.1.0",
-	"private": true,
+	"private": false,
 	"keywords": [
 		"react",
 		"create-react-app",
