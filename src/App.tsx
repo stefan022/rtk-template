@@ -1,12 +1,12 @@
 import React from "react";
 
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
-import { AppRoute } from "./router/AppRoute";
+import Router from "./router/Router";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
 	return (
 		<ErrorBoundary>
-			<AppRoute />
+			<Router />
 		</ErrorBoundary>
 	);
 }

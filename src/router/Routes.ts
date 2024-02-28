@@ -1,6 +1,6 @@
 const AppRoutes = {
-	DASHBOARD: "/dashboard",
-	LOGIN: "/login",
+    HOME: '/',
+    NOF_FOUND: '*',
 };
 
 export default AppRoutes;

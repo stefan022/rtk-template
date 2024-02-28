@@ -1,36 +1,40 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/state-in-constructor */
 /* eslint-disable no-console */
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-	children?: ReactNode;
+interface IProps {
+    children?: ReactNode;
 }
 
-interface State {
-	hasError: boolean;
+interface IState {
+    hasError: boolean;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-	public state: State = {
-		hasError: false,
-	};
+class ErrorBoundary extends Component<IProps, IState> {
+    public state: IState = {
+        hasError: false,
+    };
 
-	public static getDerivedStateFromError(_: Error): State {
-		return { hasError: true };
-	}
+    // eslint-disable-next-line
+    public static getDerivedStateFromError(_: Error): IState {
+        return { hasError: true };
+    }
 
-	public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-		console.error("Uncaught error:", error, errorInfo);
-	}
+    public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+        console.error('Uncaught error:', error, errorInfo);
+    }
 
-	public render() {
-		if (this.state.hasError) {
-			return <h1>Sorry.. there was an error</h1>;
-		}
+    public render() {
+        if (this.state.hasError) {
+            return (
+                <div>
+                    <h1>Oops.. something went wrong.</h1>
+                    <h2>Please, try again later.</h2>
+                </div>
+            );
+        }
 
-		return this.props.children;
-	}
+        return this.props.children;
+    }
 }
 
 export default ErrorBoundary;

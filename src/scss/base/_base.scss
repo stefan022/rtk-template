@@ -1,0 +1,18 @@
+* {
+	@apply p-0 m-0;
+}
+
+*,
+*::before,
+*::after {
+	@apply box-border;
+}
+
+html {
+	@apply scroll-smooth;
+	font-size: $original_font_size;
+}
+
+body {
+	@apply bg-gray-950 text-gray-200;
+}
